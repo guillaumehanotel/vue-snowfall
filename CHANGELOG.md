@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.4.0](https://github.com/cahilfoley/react-snowfall/compare/v2.3.0...v2.4.0) (2025-12-01)
+
+
+### Features
+
+* Add 3D rotation effect option for snowflakes ([bd7f4db](https://github.com/cahilfoley/react-snowfall/commit/bd7f4db6786fe64c472468a6b61a02d26defe26d))
+
 ## [2.3.0](https://github.com/cahilfoley/react-snowfall/compare/v2.2.1...v2.3.0) (2025-07-25)
 
 
