@@ -175,14 +175,10 @@ class Snowflake {
             const b = cosZ * sinY * sinX - sinZ * cosX;
             const c = cosZ * sinY * cosX + sinZ * sinX;
             const d = sinZ * cosY;
-            // Apply perspective scaling based on rotation (simulates depth)
-            const perspectiveScale = 0.5 + 0.5 * cosX * cosY;
-            const scaleX = perspectiveScale;
-            const scaleY = perspectiveScale;
             // Apply the transform
             // The arguments for setTransform are: a, b, c, d, e, f
             // a (scaleX), b (skewY), c (skewX), d (scaleY), e (translateX), f (translateY)
-            ctx.setTransform(a * scaleX, b * scaleX, c * scaleY, d * scaleY, x, y);
+            ctx.setTransform(a, b, c, d, x, y);
         }
         else {
             // Original 2D rotation (only for images)
