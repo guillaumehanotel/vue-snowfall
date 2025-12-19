@@ -2,32 +2,32 @@
 
 # Vue Snowfall
 
-[![npm](https://img.shields.io/npm/v/vue-snowfall.svg)](https://www.npmjs.com/package/vue-snowfall)
-[![GitHub stars](https://img.shields.io/github/stars/cahilfoley/vue-snowfall.svg)](https://github.com/cahilfoley/vue-snowfall/stargazers)
+> **Note:** This is a Vue 3 port of [react-snowfall](https://github.com/cahilfoley/react-snowfall) by [@cahilfoley](https://github.com/cahilfoley).
+
+[![npm](https://img.shields.io/npm/v/@guillaumehanotel/vue-snowfall.svg)](https://www.npmjs.com/package/@guillaumehanotel/vue-snowfall)
+[![GitHub stars](https://img.shields.io/github/stars/guillaumehanotel/vue-snowfall.svg)](https://github.com/guillaumehanotel/vue-snowfall/stargazers)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
 A Vue 3 component that creates a snowfall effect
-
-- [Live Example](https://cahilfoley.github.io/vue-snowfall)
 
 ## Installation
 
 With npm
 
 ```
-npm i vue-snowfall
+npm i @guillaumehanotel/vue-snowfall
 ```
 
 Or with yarn
 
 ```
-yarn add vue-snowfall
+yarn add @guillaumehanotel/vue-snowfall
 ```
 
 Or with pnpm
 
 ```
-pnpm add vue-snowfall
+pnpm add @guillaumehanotel/vue-snowfall
 ```
 
 ## Usage
@@ -36,7 +36,7 @@ Basic usage requires no properties - it will grow to fill the nearest relative p
 
 ```vue
 <script setup>
-import Snowfall from 'vue-snowfall'
+import Snowfall from '@guillaumehanotel/vue-snowfall'
 </script>
 
 <template>
@@ -86,7 +86,7 @@ that will be randomly selected and used as the snowflake instead.
 ```vue
 <script setup>
 import { ref, onMounted } from 'vue'
-import Snowfall from 'vue-snowfall'
+import Snowfall from '@guillaumehanotel/vue-snowfall'
 
 const images = ref<HTMLImageElement[]>([])
 
@@ -162,7 +162,7 @@ You can use this snowfall animation with any framework or even vanilla JS with t
 ```
 
 ```ts
-import { SnowfallCanvas } from 'vue-snowfall/lib/SnowfallCanvas'
+import { SnowfallCanvas } from '@guillaumehanotel/vue-snowfall/lib/SnowfallCanvas'
 
 const canvas = document.querySelector('#snowfall')
 const snowfall = new SnowfallCanvas(canvas)
