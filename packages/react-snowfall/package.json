@@ -1,10 +1,23 @@
 {
   "name": "@guillaumehanotel/vue-snowfall",
-  "version": "2.4.0",
+  "version": "2.4.2",
   "description": "A Vue component that creates a snowfall effect",
   "type": "module",
-  "main": "./lib/index.js",
+  "main": "./lib/index.cjs",
+  "module": "./lib/index.js",
   "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "require": "./lib/index.cjs",
+      "types": "./lib/index.d.ts"
+    },
+    "./vanilla": {
+      "import": "./lib/vanilla.js",
+      "require": "./lib/vanilla.cjs",
+      "types": "./lib/vanilla.d.ts"
+    }
+  },
   "sideEffects": false,
   "scripts": {
     "build": "vue-tsc && vite build",

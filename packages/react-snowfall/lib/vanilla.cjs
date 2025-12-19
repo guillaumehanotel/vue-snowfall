@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./vanilla-6WTI9jGM.cjs");exports.SnowfallCanvas=e.SnowfallCanvas;exports.Snowflake=e.Snowflake;exports.defaultConfig=e.defaultConfig;exports.targetFrameTime=e.targetFrameTime;

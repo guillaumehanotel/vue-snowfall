@@ -162,8 +162,17 @@ You can use this snowfall animation with any framework or even vanilla JS with t
 ```
 
 ```ts
-import { SnowfallCanvas } from '@guillaumehanotel/vue-snowfall/lib/SnowfallCanvas'
+import { SnowfallCanvas } from '@guillaumehanotel/vue-snowfall/vanilla'
 
 const canvas = document.querySelector('#snowfall')
-const snowfall = new SnowfallCanvas(canvas)
+const snowfall = new SnowfallCanvas(canvas, {
+  // Optional configuration
+  color: '#dee4fd',
+  snowflakeCount: 150,
+  radius: [0.5, 3.0],
+  speed: [1.0, 3.0],
+  wind: [-0.5, 2.0],
+})
 ```
+
+The `/vanilla` entry point exports only the classes without any Vue dependency, making it safe to use in any JavaScript environment.

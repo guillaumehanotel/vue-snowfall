@@ -9,16 +9,16 @@ export default defineConfig({
     dts({
       include: ['src/**/*.ts', 'src/**/*.vue'],
       exclude: ['src/test/**/*'],
-      insertTypesEntry: true,
-      rollupTypes: true,
     }),
   ],
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/index.ts'),
-      name: 'VueSnowfall',
+      entry: {
+        index: resolve(__dirname, 'src/index.ts'),
+        vanilla: resolve(__dirname, 'src/vanilla.ts'),
+      },
       formats: ['es', 'cjs'],
-      fileName: (format) => `index.${format === 'es' ? 'js' : 'cjs'}`,
+      fileName: (format, entryName) => `${entryName}.${format === 'es' ? 'js' : 'cjs'}`,
     },
     rollupOptions: {
       external: ['vue'],
