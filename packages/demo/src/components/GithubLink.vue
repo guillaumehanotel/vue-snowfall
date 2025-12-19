@@ -1,15 +1,15 @@
-import './GithubLink.css'
-
-export interface GithubLinkProps {
+<script setup lang="ts">
+defineProps<{
   url: string
-}
+}>()
+</script>
 
-const GithubLink: React.FC<GithubLinkProps> = ({ url }) => (
-  <a href={url} className="github-corner" aria-label="View source on GitHub">
+<template>
+  <a :href="url" class="github-corner" aria-label="View source on GitHub">
     <svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true">
       <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z" />
       <path
-        d={[
+        :d="[
           'M128.3,109.0',
           'C113.8,99.7',
           '119.0,89.6',
@@ -26,13 +26,13 @@ const GithubLink: React.FC<GithubLinkProps> = ({ url }) => (
           'C122.9,97.6',
           '130.6,101.9',
           '134.4,103.2'
-        ].join(' ')}
+        ].join(' ')"
         fill="currentColor"
-        style={{ transformOrigin: '130px 106px' }}
-        className="octo-arm"
+        :style="{ transformOrigin: '130px 106px' }"
+        class="octo-arm"
       />
       <path
-        d={[
+        :d="[
           'M115.0,115.0',
           'C114.9,115.1',
           '118.7,116.5',
@@ -79,11 +79,13 @@ const GithubLink: React.FC<GithubLinkProps> = ({ url }) => (
           '141.6,141.9',
           '141.8,141.8',
           'Z'
-        ].join(' ')}
+        ].join(' ')"
         fill="currentColor"
       />
     </svg>
   </a>
-)
+</template>
 
-export default GithubLink
+<style>
+@import './GithubLink.css';
+</style>

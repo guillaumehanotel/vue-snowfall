@@ -1,3 +1,3 @@
 export * from './SnowfallCanvas.js'
-export * from './Snowfall.js'
-export { default } from './Snowfall.js'
+export { default as Snowfall, type SnowfallProps } from './Snowfall.vue'
+export { default } from './Snowfall.vue'

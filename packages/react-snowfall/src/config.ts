@@ -1,4 +1,6 @@
-export const snowfallBaseStyle: React.CSSProperties = {
+import type { CSSProperties } from 'vue'
+
+export const snowfallBaseStyle: CSSProperties = {
   pointerEvents: 'none',
   backgroundColor: 'transparent',
   position: 'absolute',

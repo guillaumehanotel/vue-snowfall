@@ -1,12 +1,12 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import vue from '@vitejs/plugin-vue'
 import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/react-snowfall/',
+  base: '/vue-snowfall/',
   plugins: [
-    react(),
+    vue(),
     VitePWA({
       registerType: 'autoUpdate',
       workbox: {
@@ -14,9 +14,9 @@ export default defineConfig({
       },
       includeAssets: ['favicon.ico', 'apple-touch-icon.png'],
       manifest: {
-        name: 'React Snowfall',
+        name: 'Vue Snowfall',
         short_name: 'Snowfall',
-        description: 'A high performance snow effect for react',
+        description: 'A high performance snow effect for Vue',
         icons: [
           {
             src: 'android-chrome-192x192.png',
@@ -32,8 +32,8 @@ export default defineConfig({
         theme_color: '#ffffff',
         background_color: '#ffffff',
         display: 'standalone',
-        start_url: '/react-snowfall/?source=pwa',
-        scope: '/react-snowfall/'
+        start_url: '/vue-snowfall/?source=pwa',
+        scope: '/vue-snowfall/'
       }
     })
   ]

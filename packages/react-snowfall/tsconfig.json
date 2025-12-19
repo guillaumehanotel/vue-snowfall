@@ -1,17 +1,33 @@
 {
   "compilerOptions": {
-    "target": "ES2019",
-    "moduleResolution": "node",
-    "declaration": true,
-    "module": "esnext",
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+
+    /* Linting */
     "strict": true,
-    "jsx": "react",
-    "esModuleInterop": true,
-    "lib": ["dom", "es2015"],
-    "outDir": "lib",
-    "baseUrl": "src",
-    "sourceMap": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Vue */
+    "jsx": "preserve",
+
+    /* Output */
+    "declaration": true,
+    "declarationDir": "./lib",
+    "outDir": "./lib",
+    "baseUrl": "src"
   },
-  "include": ["src"],
+  "include": ["src/**/*.ts", "src/**/*.vue"],
   "exclude": ["src/test", "**/*.test.ts", "**/*.test.tsx"]
 }

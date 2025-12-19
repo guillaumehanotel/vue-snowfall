@@ -352,7 +352,7 @@ describe('Snowflake', () => {
       expect(restoreSpy).toHaveBeenCalled()
     })
 
-    it('should not save/restore context when opacity is 1', () => {
+    it('should save/restore context but not change globalAlpha when opacity is 1', () => {
       const img = document.createElement('img')
       Object.defineProperty(img, 'complete', { value: true })
 
@@ -363,11 +363,15 @@ describe('Snowflake', () => {
 
       const saveSpy = vi.spyOn(ctx, 'save')
       const restoreSpy = vi.spyOn(ctx, 'restore')
+      const originalAlpha = ctx.globalAlpha
 
       snowflake.drawImage(ctx)
 
-      expect(saveSpy).not.toHaveBeenCalled()
-      expect(restoreSpy).not.toHaveBeenCalled()
+      // Should save/restore for transform operations
+      expect(saveSpy).toHaveBeenCalled()
+      expect(restoreSpy).toHaveBeenCalled()
+      // But globalAlpha should not have been changed from default (1)
+      expect(originalAlpha).toBe(1)
     })
 
     it('should set globalAlpha when opacity is not 1', () => {

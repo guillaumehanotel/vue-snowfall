@@ -1,10 +1,4 @@
-import { expect, afterEach, vi } from 'vitest'
-import { cleanup } from '@testing-library/react'
-
-// Cleanup after each test case
-afterEach(() => {
-  cleanup()
-})
+import { vi } from 'vitest'
 
 // Mock HTMLCanvasElement methods that aren't available in jsdom
 HTMLCanvasElement.prototype.getContext = vi.fn((contextId: string) => {
